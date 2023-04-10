@@ -25,9 +25,10 @@
     </div>
 @endsection
 
-<?php if (empty($fecha)): ?>
+
 @section('scripts')
     @parent
+    <?php if (empty($fecha)): ?>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js">
     </script>
