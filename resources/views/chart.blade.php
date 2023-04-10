@@ -10,7 +10,7 @@
         <div class="card-body">
             <h1 class="card-title">Gráfico de precios histórico de la UF</h1>
             <canvas id="myChart"></canvas>
-            <?php if (!empty($fecha)): ?>
+            <?php if (empty($fecha)): ?>
             <div style="margin-left: 5px;">
                 <input type='date' onchange='startDateFilter(this)' value='{{ $fecha[0] }}' min='{{ $fecha[0] }}'
                     max='{{ $fecha[count($fecha) - 1] }}'>
@@ -25,7 +25,7 @@
     </div>
 @endsection
 
-<?php if (!empty($fecha)): ?>
+<?php if (empty($fecha)): ?>
 @section('scripts')
     @parent
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js/dist/chart.umd.min.js"></script>
