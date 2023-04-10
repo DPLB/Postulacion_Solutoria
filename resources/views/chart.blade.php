@@ -10,10 +10,12 @@
         <div class="card-body">
             <h1 class="card-title">Gráfico de precios histórico de la UF</h1>
             <canvas id="myChart"></canvas>
+            <?php if (!empty($fecha)): ?>
             <div style="margin-left: 5px;">
                 <input type='date' onchange='startDateFilter(this)' value='{{ $fecha[0] }}' min='{{ $fecha[0] }}' max='{{ $fecha[count($fecha)-1] }}'>
                 <input type='date' onchange='endDateFilter(this)' value='{{ $fecha[count($fecha)-1] }}' min='{{ $fecha[0] }}' max='{{ $fecha[count($fecha)-1] }}'>
             </div>
+            <?php endif; ?>
             <br>
         </div>
     </div>
